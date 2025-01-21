@@ -14,9 +14,8 @@ window {
     height: 4.6%;
     anchor: north;
     y-offset: -4.7%;
-    x-offset: 8%;
     location: northwest;
-    width:61%;
+    width:100%;
     padding: 4px;
     children:   [ horibox ];
 }

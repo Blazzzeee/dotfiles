@@ -45,10 +45,11 @@ window#waybar {
 #custom-power,
 #custom-spotify,
 #custom-notification,
-#cpu,
-#tray,
+#network,
+#bluetooth,
 #memory,
 #window,
+#battery,
 #mpris {
   padding: 0.3rem 0.6rem;
   margin: 0.4rem 0.25rem;
@@ -74,8 +75,13 @@ window#waybar.empty #window {
   background-color: transparent;
 }
 
-#cpu {
+#network {
   color: #94e2d5;
+}
+
+#bluetooth{
+	color: #94e2d5;
+	font-size: 1.5rem;
 }
 
 #memory {
