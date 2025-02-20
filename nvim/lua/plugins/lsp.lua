@@ -34,11 +34,11 @@ return {
 				vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 			end
 
-			local capabilities = require('blink.cmp').get_lsp_capabilities()
+			local capabilities = require('cmp_nvim_lsp').default_capabilities()
 			for _, server in ipairs(servers) do
 				lspconfig[server].setup({
 					on_attach = on_attach,
-					capabilities = capabilities,
+					capabilities = capabilities
 				})
 			end
 		end,

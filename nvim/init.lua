@@ -38,3 +38,17 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 --annoying save prompt
 
 vim.opt.shortmess:append("c")
+
+--tab spacing
+
+-- Use spaces instead of tabs
+vim.o.expandtab = true
+
+-- Set the width of each indentation level
+vim.o.shiftwidth = 4 -- Change 4 to whatever width you prefer
+
+-- Set the width of a tab character
+vim.o.tabstop = 4 -- Ensure it matches shiftwidth if you want consistency
+
+-- Keep auto-indents aligned with shiftwidth
+vim.o.smartindent = true
