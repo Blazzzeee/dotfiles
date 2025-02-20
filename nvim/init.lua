@@ -54,24 +54,19 @@ vim.o.tabstop = 4 -- Ensure it matches shiftwidth if you want consistency
 vim.o.smartindent = true
 
 --highlights for completions
-
--- Deprecated (gray) – uses a muted comment color with strikethrough
-vim.api.nvim_set_hl(0, 'CmpItemAbbrDeprecated', { bg = "#1f2335", fg = "#565f89", strikethrough = true })
-
--- Match (blue) – for matching text in completions
-vim.api.nvim_set_hl(0, 'CmpItemAbbrMatch', { bg = "#1f2335", fg = "#7aa2f7" })
-vim.api.nvim_set_hl(0, 'CmpItemAbbrMatchFuzzy', { link = 'CmpItemAbbrMatch' })
-
--- Variable / Interface / Text (cyan) – using a light cyan for variables and similar items
-vim.api.nvim_set_hl(0, 'CmpItemKindVariable', { bg = "#1f2335", fg = "#7dcfff" })
+-- gray
+vim.api.nvim_set_hl(0, 'CmpItemAbbrDeprecated', { bg = 'NONE', strikethrough = true, fg = '#808080' })
+-- blue
+vim.api.nvim_set_hl(0, 'CmpItemAbbrMatch', { bg = 'NONE', fg = '#569CD6' })
+vim.api.nvim_set_hl(0, 'CmpItemAbbrMatchFuzzy', { link = 'CmpIntemAbbrMatch' })
+-- light blue
+vim.api.nvim_set_hl(0, 'CmpItemKindVariable', { bg = 'NONE', fg = '#9CDCFE' })
 vim.api.nvim_set_hl(0, 'CmpItemKindInterface', { link = 'CmpItemKindVariable' })
 vim.api.nvim_set_hl(0, 'CmpItemKindText', { link = 'CmpItemKindVariable' })
-
--- Function / Method (purple) – functions get a purple tone
-vim.api.nvim_set_hl(0, 'CmpItemKindFunction', { bg = "#1f2335", fg = "#bb9af7" })
+-- pink
+vim.api.nvim_set_hl(0, 'CmpItemKindFunction', { bg = 'NONE', fg = '#C586C0' })
 vim.api.nvim_set_hl(0, 'CmpItemKindMethod', { link = 'CmpItemKindFunction' })
-
--- Keyword / Property / Unit (light gray) – for keywords and similar completion types
-vim.api.nvim_set_hl(0, 'CmpItemKindKeyword', { bg = "#1f2335", fg = "#a9b1d6" })
+-- front
+vim.api.nvim_set_hl(0, 'CmpItemKindKeyword', { bg = 'NONE', fg = '#D4D4D4' })
 vim.api.nvim_set_hl(0, 'CmpItemKindProperty', { link = 'CmpItemKindKeyword' })
 vim.api.nvim_set_hl(0, 'CmpItemKindUnit', { link = 'CmpItemKindKeyword' })
