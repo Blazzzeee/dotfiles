@@ -13,11 +13,11 @@ vim.keymap.set("n", "<space>pv", function() vim.cmd.Ex() end)
 local augroup = vim.api.nvim_create_augroup("AutoFormat", { clear = true })
 
 vim.api.nvim_create_autocmd("BufWritePre", {
-	group = augroup,
-	callback = function()
-		vim.lsp.buf.format({ async = false }) -- Synchronous formatting before save
-	end,
-	desc = "Auto format buffer on save",
+    group = augroup,
+    callback = function()
+        vim.lsp.buf.format({ async = false }) -- Synchronous formatting before save
+    end,
+    desc = "Auto format buffer on save",
 })
 
 -- Set a semi-transparent effect for visual mode (using lighter background)
@@ -29,10 +29,10 @@ vim.opt.guicursor = "i:block"
 
 --dont fold for kitty.conf
 vim.api.nvim_create_autocmd("BufReadPost", {
-	pattern = "kitty.conf",
-	callback = function()
-		vim.opt_local.foldenable = false
-	end,
+    pattern = "kitty.conf",
+    callback = function()
+        vim.opt_local.foldenable = false
+    end,
 })
 
 --annoying save prompt
@@ -52,3 +52,26 @@ vim.o.tabstop = 4 -- Ensure it matches shiftwidth if you want consistency
 
 -- Keep auto-indents aligned with shiftwidth
 vim.o.smartindent = true
+
+--highlights for completions
+
+-- Deprecated (gray) – uses a muted comment color with strikethrough
+vim.api.nvim_set_hl(0, 'CmpItemAbbrDeprecated', { bg = "#1f2335", fg = "#565f89", strikethrough = true })
+
+-- Match (blue) – for matching text in completions
+vim.api.nvim_set_hl(0, 'CmpItemAbbrMatch', { bg = "#1f2335", fg = "#7aa2f7" })
+vim.api.nvim_set_hl(0, 'CmpItemAbbrMatchFuzzy', { link = 'CmpItemAbbrMatch' })
+
+-- Variable / Interface / Text (cyan) – using a light cyan for variables and similar items
+vim.api.nvim_set_hl(0, 'CmpItemKindVariable', { bg = "#1f2335", fg = "#7dcfff" })
+vim.api.nvim_set_hl(0, 'CmpItemKindInterface', { link = 'CmpItemKindVariable' })
+vim.api.nvim_set_hl(0, 'CmpItemKindText', { link = 'CmpItemKindVariable' })
+
+-- Function / Method (purple) – functions get a purple tone
+vim.api.nvim_set_hl(0, 'CmpItemKindFunction', { bg = "#1f2335", fg = "#bb9af7" })
+vim.api.nvim_set_hl(0, 'CmpItemKindMethod', { link = 'CmpItemKindFunction' })
+
+-- Keyword / Property / Unit (light gray) – for keywords and similar completion types
+vim.api.nvim_set_hl(0, 'CmpItemKindKeyword', { bg = "#1f2335", fg = "#a9b1d6" })
+vim.api.nvim_set_hl(0, 'CmpItemKindProperty', { link = 'CmpItemKindKeyword' })
+vim.api.nvim_set_hl(0, 'CmpItemKindUnit', { link = 'CmpItemKindKeyword' })
