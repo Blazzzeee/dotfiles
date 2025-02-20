@@ -3,6 +3,7 @@ vim.opt.relativenumber = true
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 require("config.lazy")
+require("keymap")
 vim.opt.clipboard = "unnamedplus"
 
 -- Navigate to previous dir
@@ -25,3 +26,15 @@ vim.api.nvim_set_hl(0, "Visual", { bg = "#cccccc", fg = "#000000" })
 --Set cursor style to block in insert mode
 
 vim.opt.guicursor = "i:block"
+
+--dont fold for kitty.conf
+vim.api.nvim_create_autocmd("BufReadPost", {
+	pattern = "kitty.conf",
+	callback = function()
+		vim.opt_local.foldenable = false
+	end,
+})
+
+--annoying save prompt
+
+vim.opt.shortmess:append("c")

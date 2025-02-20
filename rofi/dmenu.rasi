@@ -4,6 +4,7 @@ configuration {
   show-icons: false;
   drun-display-format: "{name}";
   font: "JetBrains Mono 16";
+      listview-hover-select: true;
 } 
 *{
     background-color:      #181926;

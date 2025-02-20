@@ -120,10 +120,11 @@
     },
   "custom/power": {
     "tooltip": false,
-    "on-click": "wlogout -p layer-shell &",
+    "on-click": "wlogout --layout /usr/share/wlogout/layout --css /usr/share/wlogout/style.css -b 6 ",
     "format": "⏻",
   },
  "network": {
+	 
 
 "format-wifi": " {essid}",
 
@@ -135,7 +136,7 @@
 
 "max-length": 50,
 
-"on-click": "nm-connection-editor"
+"on-click": "network_manager"
 
 }, 
   "custom/notification": {
