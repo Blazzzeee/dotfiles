@@ -8,18 +8,13 @@
 
 window#waybar {
   transition-property: background-color;
-  transition-duration: 0.5s;
-  /* background-color: #1e1e2e; */
-  /* background-color: #181825; */
   background-color: #11111b;
-  /* background-color: rgba(24, 24, 37, 0.6); */
 }
 
 #workspaces button {
   padding: 0.3rem 0.6rem;
   margin: 0.4rem 0.25rem;
   border-radius: 6px;
-  /* background-color: #181825; */
   background-color: #1e1e2e;
   color: #cdd6f4;
 }
@@ -77,6 +72,7 @@ window#waybar.empty #window {
 
 #network {
   color: #94e2d5;
+  font-size: 22px;
 }
 
 #bluetooth{
@@ -115,6 +111,13 @@ window#waybar.empty #window {
 #custom-power {
   color: #f38ba8;
 }
+
+
+#custom-notification{
+    color: #74c7ec;
+    font-size: 22px;
+}
+
 
 tooltip {
   background-color: #181825;
