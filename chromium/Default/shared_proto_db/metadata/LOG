@@ -1,3 +1,2 @@
-2025/01/22-22:52:08.505 2bef Reusing MANIFEST /home/blazzee/.config/chromium/Default/shared_proto_db/metadata/MANIFEST-000001
-2025/01/22-22:52:08.505 2bef Recovering log #3
-2025/01/22-22:52:08.505 2bef Reusing old log /home/blazzee/.config/chromium/Default/shared_proto_db/metadata/000003.log 
+2025/02/22-23:01:05.332 71f Creating DB /home/blazzee/.config/chromium/Default/shared_proto_db/metadata since it was missing.
+2025/02/22-23:01:05.974 71f Reusing MANIFEST /home/blazzee/.config/chromium/Default/shared_proto_db/metadata/MANIFEST-000001

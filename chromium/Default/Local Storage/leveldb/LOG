@@ -1,3 +1,2 @@
-2025/01/22-22:52:08.423 4 Reusing MANIFEST /home/blazzee/.config/chromium/Default/Local Storage/leveldb/MANIFEST-000001
-2025/01/22-22:52:08.427 4 Recovering log #3
-2025/01/22-22:52:08.428 4 Reusing old log /home/blazzee/.config/chromium/Default/Local Storage/leveldb/000003.log 
+2025/02/22-23:00:51.758 4 Creating DB /home/blazzee/.config/chromium/Default/Local Storage/leveldb since it was missing.
+2025/02/22-23:00:54.054 4 Reusing MANIFEST /home/blazzee/.config/chromium/Default/Local Storage/leveldb/MANIFEST-000001
