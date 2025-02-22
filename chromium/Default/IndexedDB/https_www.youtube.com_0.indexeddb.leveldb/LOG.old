@@ -1,0 +1,6 @@
+2025/01/13-14:19:10.753 aa5 Creating DB /home/blazzee/.config/chromium/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb since it was missing.
+2025/01/13-14:19:11.220 aa5 Reusing MANIFEST /home/blazzee/.config/chromium/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/01/13-14:21:07.613 aa5 Level-0 table #5: started
+2025/01/13-14:21:07.655 aa5 Level-0 table #5: 211267 bytes OK
+2025/01/13-14:21:07.708 aa5 Delete type=0 #3
+2025/01/13-14:21:07.709 aa5 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

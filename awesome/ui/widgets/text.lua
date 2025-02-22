@@ -34,10 +34,10 @@ local function generate_markup(self)
 	self._private.text = gstring.xml_escape(tostring(self._private.text))
 
 	self.markup = bold_start
-		.. italic_start
-		.. helpers.ui.colorize_text(self._private.text, self._private.color)
-		.. italic_end
-		.. bold_end
+	    .. italic_start
+	    .. helpers.ui.colorize_text(self._private.text, self._private.color)
+	    .. italic_end
+	    .. bold_end
 end
 
 function text:set_width(width)

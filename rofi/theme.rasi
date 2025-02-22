@@ -1,0 +1,60 @@
+
+configuration {
+  modi: "drun";
+  display-drun: "";
+  show-icons: true;
+  drun-display-format: "{icon}  {name}";
+  font: "JetBrains Mono 18";
+}
+
+@theme "/dev/null"
+
+* {
+  bg: #242526;
+  fg: #f8f8f6;
+  al: #404749;
+  border-radius: 4px;
+  background-color: @bg;
+  text-color: @fg;
+}
+
+window {
+  location: north;
+  width: 30%;
+  y-offset: 22.5%;
+  spacing: 0;
+  children: [ box ];
+}
+
+box {
+  spacing: 0.25em;
+  children: [ entry, listview ];
+}
+
+entry {
+  placeholder: "Search...";
+  placeholder-color: @al;
+  padding: 0.50em;
+  expand: false;
+}
+
+element {
+  text-color: @al;
+  padding: 0.50em;
+}
+element selected {
+  text-color: @fg;
+}
+element-text, element-icon {
+  background-color: inherit;
+  text-color: inherit;
+}
+
+listview {
+  lines: 3;    
+  fixed-height: false;
+}
+
+listview, element, element selected, element-text, element-icon {
+  cursor: pointer;
+}

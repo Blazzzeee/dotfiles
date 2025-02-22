@@ -1,0 +1,5 @@
+{
+    "workbench.colorTheme": "Github Catppuccin Dark Plus",
+    "terminal.external.linuxExec": "kitty",
+    "code-runner.runInTerminal": true
+}

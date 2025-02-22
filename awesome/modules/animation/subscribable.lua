@@ -1,8 +1,3 @@
--------------------------------------------
--- @author https://github.com/Kasper24
--- @copyright 2021-2022 Kasper24
--------------------------------------------
-
 local gobject = require("gears.object")
 
 -- Kidna copying awesotre's stores on a surface level for added compatibility

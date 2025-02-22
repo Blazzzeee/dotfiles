@@ -1,0 +1,7 @@
+{
+    "diagnostics.globals": [
+        "terminal",
+        "editor",
+        "editor_cmd"
+    ]
+}

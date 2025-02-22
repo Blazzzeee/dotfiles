@@ -1,0 +1,49 @@
+2025-01-13 13:53:00.249 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-vscode.vscode-selfhost-test-provider' wants API proposal 'attributableCoverage' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-01-13 13:53:00.250 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.python' wants API proposal 'contribIssueReporter' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-01-13 13:53:00.250 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.debugpy' wants API proposal 'contribIssueReporter' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-01-13 13:53:01.013 [info] Started local extension host with pid 2059.
+2025-01-13 13:53:07.444 [info] [perf] Render performance baseline is 70ms
+2025-01-13 13:53:12.329 [error] Timed out waiting for authentication provider to register
+2025-01-13 13:53:23.223 [error] [network] #1: https://open-vsx.org/vscode/gallery/extensionquery - error POST Canceled
+2025-01-13 13:53:45.266 [error] [network] #5: https://open-vsx.org/vscode/gallery/extensionquery - error POST Canceled
+2025-01-13 13:53:53.068 [error] [network] #7: https://open-vsx.org/vscode/gallery/extensionquery - error POST Canceled
+2025-01-13 13:53:53.813 [error] [network] #9: https://open-vsx.org/vscode/gallery/extensionquery - error POST Canceled
+2025-01-13 13:54:16.569 [error] [network] #17: https://open-vsx.org/vscode/gallery/extensionquery - error POST Canceled
+2025-01-13 13:54:34.196 [error] [network] #26: https://open-vsx.org/vscode/gallery/extensionquery - error POST Canceled
+2025-01-13 13:55:09.218 [error] [network] #37: https://open-vsx.org/vscode/gallery/extensionquery - error POST Canceled
+2025-01-13 13:56:03.639 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-vscode.vscode-selfhost-test-provider' wants API proposal 'attributableCoverage' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-01-13 13:56:03.639 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.python' wants API proposal 'contribIssueReporter' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-01-13 13:56:03.640 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.debugpy' wants API proposal 'contribIssueReporter' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-01-13 13:56:03.973 [info] Started local extension host with pid 2398.
+2025-01-13 13:56:06.766 [info] [perf] Render performance baseline is 74ms
+2025-01-13 13:56:09.796 [error] Timed out waiting for authentication provider to register
+2025-01-13 13:59:48.340 [warning] Settings pattern "issueReporter.*" doesn't match any settings
+2025-01-13 14:00:08.886 [warning] Settings pattern "issueReporter.*" doesn't match any settings
+2025-01-13 14:04:23.741 [error] Unable to resolve nonexistent file 'vscode-userdata:/home/blazzee/.config/VSCodium/User/globalStorage/vadimcn.vscode-lldb': Error: Unable to resolve nonexistent file 'vscode-userdata:/home/blazzee/.config/VSCodium/User/globalStorage/vadimcn.vscode-lldb'
+    at $rt.resolve (vscode-file://vscode-app/usr/share/vscodium/resources/app/out/vs/workbench/workbench.desktop.main.js:3108:85125)
+    at async OTt (vscode-file://vscode-app/usr/share/vscodium/resources/app/out/vs/workbench/workbench.desktop.main.js:480:50847)
+2025-01-13 14:04:35.301 [error] [network] #14: https://open-vsx.org/vscode/gallery/extensionquery - error POST Canceled
+2025-01-13 14:20:32.981 [error] [ExtensionListenerError] Extension 'cschlosser.doxdocgen' FAILED to handle event: Error: Illegal value for `line`: Error: [ExtensionListenerError] Extension 'cschlosser.doxdocgen' FAILED to handle event: Error: Illegal value for `line`
+	at xh.value (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:157:40524)
+	at I._deliver (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:922)
+	at I._deliverQueue (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:1013)
+	at I.fire (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:1349)
+	at VU.$acceptModelChanged (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:138:117115)
+	at Py._doInvokeHandler (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:124430)
+	at Py._invokeHandler (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:124174)
+	at Py._receiveRequest (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:122940)
+	at Py._receiveOneMessage (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:121766)
+	at xh.value (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:119865)
+	at I._deliver (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:922)
+	at I.fire (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:1242)
+	at qn.fire (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:10940)
+	at xh.value (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:14518)
+	at I._deliver (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:922)
+	at I.fire (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:1242)
+	at qn.fire (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:10940)
+	at MessagePortMain.<anonymous> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:12729)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949)
+2025-01-13 14:20:52.520 [error] Unable to resolve nonexistent file 'vscode-userdata:/home/blazzee/.config/VSCodium/User/globalStorage/auiworks.amvim': Error: Unable to resolve nonexistent file 'vscode-userdata:/home/blazzee/.config/VSCodium/User/globalStorage/auiworks.amvim'
+    at $rt.resolve (vscode-file://vscode-app/usr/share/vscodium/resources/app/out/vs/workbench/workbench.desktop.main.js:3108:85125)
+    at async OTt (vscode-file://vscode-app/usr/share/vscodium/resources/app/out/vs/workbench/workbench.desktop.main.js:480:50847)

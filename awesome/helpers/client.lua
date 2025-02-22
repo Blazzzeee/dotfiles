@@ -43,10 +43,10 @@ function _client.move_to_edge(c, direction)
 		c:geometry({
 			nil,
 			y = workarea.height
-				+ workarea.y
-				- c:geometry().height
-				- beautiful.useless_gap * 2
-				- beautiful.border_width * 2,
+			    + workarea.y
+			    - c:geometry().height
+			    - beautiful.useless_gap * 2
+			    - beautiful.border_width * 2,
 			nil,
 			nil,
 		})
@@ -55,10 +55,10 @@ function _client.move_to_edge(c, direction)
 	elseif direction == "right" then
 		c:geometry({
 			x = workarea.width
-				+ workarea.x
-				- c:geometry().width
-				- beautiful.useless_gap * 2
-				- beautiful.border_width * 2,
+			    + workarea.x
+			    - c:geometry().width
+			    - beautiful.useless_gap * 2
+			    - beautiful.border_width * 2,
 			nil,
 			nil,
 			nil,

@@ -1,11 +1,3 @@
--------------------------------------------
--- @author https://github.com/Kasper24
--- @copyright 2021-2022 Kasper24
--------------------------------------------
-
--- easing
-
--- Adapted from https://github.com/EmmanuelOga/easing. See LICENSE.txt for credits.
 -- For all easing functions:
 -- t = time == how much time has to pass for the tweening to complete
 -- b = begin == starting property value
@@ -211,7 +203,7 @@ local function calculatePAS(p, a, c, d)
 	p, a = p or d * 0.3, a or 0
 	if a < abs(c) then
 		return p, c, p / 4
-	end -- p, a, s
+	end                              -- p, a, s
 	return p, a, p / (2 * pi) * asin(c / a) -- p,a,s
 end
 local function inElastic(t, b, c, d, a, p)
@@ -392,7 +384,8 @@ local function checkSubjectAndTargetRecursively(subject, target, path)
 		if targetType == "number" then
 			assert(
 				type(subject[k]) == "number",
-				"Parameter '" .. table.concat(newPath, "/") .. "' is missing from subject or isn't a number"
+				"Parameter '" ..
+				table.concat(newPath, "/") .. "' is missing from subject or isn't a number"
 			)
 		elseif targetType == "table" then
 			checkSubjectAndTargetRecursively(subject[k], targetValue, newPath)
@@ -490,7 +483,8 @@ function Tween:set(clock)
 		end
 	else
 		if self.subject then
-			performEasingOnSubject(self.subject, self.target, self.initial, self.clock, self.duration, self.easing)
+			performEasingOnSubject(self.subject, self.target, self.initial, self.clock, self.duration,
+				self.easing)
 		else
 			local pos = {}
 			return performEasing(pos, self.initial, self.target, self.clock, self.duration, self.easing)

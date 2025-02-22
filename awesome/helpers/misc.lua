@@ -90,7 +90,8 @@ function _misc.prompt(action, textbox, prompt, callback)
 				if not input or #input == 0 then
 					return
 				end
-				awful.spawn.with_shell("noglob " .. "xdg-open https://www.google.com/search?q=" .. "'" .. input .. "'")
+				awful.spawn.with_shell("noglob " ..
+				"xdg-open https://www.google.com/search?q=" .. "'" .. input .. "'")
 				naughty.notify({
 					title = "Searching the web for",
 					text = input,

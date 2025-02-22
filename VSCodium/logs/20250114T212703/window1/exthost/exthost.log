@@ -1,0 +1,56 @@
+2025-01-14 21:27:15.891 [info] Extension host with pid 3770 started
+2025-01-14 21:27:15.891 [info] Skipping acquiring lock for /home/blazzee/.config/VSCodium/User/workspaceStorage/4426f140b5c4c18cf7d99f17ae51f394.
+2025-01-14 21:27:16.674 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-01-14 21:27:16.800 [info] ExtensionService#_doActivateExtension cschlosser.doxdocgen, startup: false, activationEvent: 'onLanguage:c'
+2025-01-14 21:27:17.880 [info] ExtensionService#_doActivateExtension vadimcn.vscode-lldb, startup: false, activationEvent: 'onLanguage:c', root cause: franneck94.c-cpp-runner
+2025-01-14 21:27:18.161 [info] ExtensionService#_doActivateExtension KylinIdeTeam.cppdebug, startup: false, activationEvent: 'onLanguage:c'
+2025-01-14 21:27:19.102 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-01-14 21:27:19.500 [info] ExtensionService#_doActivateExtension franneck94.c-cpp-runner, startup: false, activationEvent: 'onLanguage:c'
+2025-01-14 21:27:20.377 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-01-14 21:27:20.740 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-01-14 21:27:21.014 [info] Eager extensions activated
+2025-01-14 21:27:21.109 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-01-14 21:27:21.131 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-01-14 21:27:21.199 [info] ExtensionService#_doActivateExtension formulahendry.code-runner, startup: false, activationEvent: 'onStartupFinished'
+2025-01-14 21:27:21.589 [info] ExtensionService#_doActivateExtension franneck94.vscode-c-cpp-config, startup: false, activationEvent: 'onStartupFinished'
+2025-01-14 21:28:27.007 [info] Extension host terminating: renderer closed the MessagePort
+2025-01-14 21:28:27.033 [error] Canceled: Canceled
+	at new D3 (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:118193)
+	at Py._remoteCall (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:124487)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:121246)
+	at l0._doExecuteCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:38451)
+	at l0.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37890)
+	at r.registerCommand.description (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37154)
+	at l0._executeContributedCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:39020)
+	at l0._doExecuteCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:38023)
+	at l0.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37890)
+	at Object.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:157:42391)
+	at setContextValue (/home/blazzee/.vscode-oss/extensions/franneck94.c-cpp-runner-9.4.7-universal/dist/main.js:5980:28)
+	at Object.deactivate (/home/blazzee/.vscode-oss/extensions/franneck94.c-cpp-runner-9.4.7-universal/dist/main.js:3869:39)
+	at VV._deactivate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:14502)
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12013
+	at Array.map (<anonymous>)
+	at VV._deactivateAll (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12001)
+	at VV.terminate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12354)
+	at XT.terminate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:1592)
+	at Zi (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:16313)
+	at MessagePortMain.<anonymous> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:12769)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949) setContext undefined
+2025-01-14 21:28:27.033 [info] Extension host with pid 3770 exiting with code 0
+2025-01-14 21:28:30.474 [info] Extension host with pid 3911 started
+2025-01-14 21:28:30.474 [info] Skipping acquiring lock for /home/blazzee/.config/VSCodium/User/workspaceStorage/ba2dc0ea49d0d85b06f0e826d85b3bb9.
+2025-01-14 21:28:30.548 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-01-14 21:28:30.714 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-01-14 21:28:30.975 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-01-14 21:28:31.259 [info] Eager extensions activated
+2025-01-14 21:28:31.406 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-01-14 21:28:31.415 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-01-14 21:28:31.488 [info] ExtensionService#_doActivateExtension formulahendry.code-runner, startup: false, activationEvent: 'onStartupFinished'
+2025-01-14 21:28:31.552 [info] ExtensionService#_doActivateExtension vadimcn.vscode-lldb, startup: false, activationEvent: 'onStartupFinished', root cause: franneck94.vscode-c-cpp-config
+2025-01-14 21:28:31.828 [info] ExtensionService#_doActivateExtension franneck94.vscode-c-cpp-config, startup: false, activationEvent: 'onStartupFinished'
+2025-01-14 21:28:33.191 [info] ExtensionService#_doActivateExtension vscode.html-language-features, startup: false, activationEvent: 'onLanguage:html'
+2025-01-14 21:28:33.402 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-01-14 21:30:47.960 [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer, startup: false, activationEvent: 'onStartupFinished'
+2025-01-15 11:15:07.704 [info] Extension host terminating: renderer closed the MessagePort
+2025-01-15 11:15:07.765 [info] Extension host with pid 3911 exiting with code 0

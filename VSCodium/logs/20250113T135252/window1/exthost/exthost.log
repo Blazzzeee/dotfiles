@@ -1,0 +1,397 @@
+2025-01-13 13:53:07.349 [info] Extension host with pid 2059 started
+2025-01-13 13:53:07.396 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-01-13 13:53:07.415 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-01-13 13:53:07.534 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-01-13 13:53:09.157 [info] Eager extensions activated
+2025-01-13 13:53:09.176 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-01-13 13:53:09.184 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-01-13 13:53:22.712 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-01-13 13:54:12.353 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-01-13 13:54:12.618 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-01-13 13:54:12.821 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-01-13 13:54:33.526 [info] ExtensionService#_doActivateExtension auiworks.amvim, startup: false, activationEvent: '*'
+2025-01-13 13:56:02.651 [info] Extension host terminating: renderer closed the MessagePort
+2025-01-13 13:56:02.699 [error] Canceled: Canceled
+	at new D3 (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:118193)
+	at Py._remoteCall (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:124487)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:121246)
+	at l0._doExecuteCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:38451)
+	at l0.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37890)
+	at r.registerCommand.description (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37154)
+	at l0._executeContributedCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:39020)
+	at l0._doExecuteCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:38023)
+	at l0.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37890)
+	at Object.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:157:42391)
+	at P.clearInputs (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61637)
+	at P.exit (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61540)
+	at P.exit (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:69298)
+	at P.dispose (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61590)
+	at /home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:48273
+	at Array.forEach (<anonymous>)
+	at t.Dispatcher.dispose (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:48246)
+	at ai (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:699)
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:18392
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1009
+	at Object.dispose (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+	at VV._deactivate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:14727)
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12013
+	at Array.map (<anonymous>)
+	at VV._deactivateAll (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12001)
+	at VV.terminate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12354)
+	at XT.terminate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:1592)
+	at Zi (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:16313)
+	at MessagePortMain.<anonymous> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:12769)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949) setContext undefined
+2025-01-13 13:56:02.699 [error] Canceled: Canceled
+	at new D3 (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:118193)
+	at Py._remoteCall (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:124487)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:121246)
+	at l0._doExecuteCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:38451)
+	at l0.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37890)
+	at r.registerCommand.description (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37154)
+	at l0._executeContributedCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:39020)
+	at l0._doExecuteCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:38023)
+	at l0.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37890)
+	at Object.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:157:42391)
+	at x.clearInputs (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61637)
+	at x.exit (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61540)
+	at x.dispose (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61590)
+	at /home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:48273
+	at Array.forEach (<anonymous>)
+	at t.Dispatcher.dispose (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:48246)
+	at ai (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:699)
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:18392
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1009
+	at Object.dispose (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+	at VV._deactivate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:14727)
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12013
+	at Array.map (<anonymous>)
+	at VV._deactivateAll (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12001)
+	at VV.terminate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12354)
+	at XT.terminate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:1592)
+	at Zi (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:16313)
+	at MessagePortMain.<anonymous> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:12769)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949) setContext undefined
+2025-01-13 13:56:02.700 [error] Canceled: Canceled
+	at new D3 (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:118193)
+	at Py._remoteCall (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:124487)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:121246)
+	at l0._doExecuteCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:38451)
+	at l0.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37890)
+	at r.registerCommand.description (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37154)
+	at l0._executeContributedCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:39020)
+	at l0._doExecuteCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:38023)
+	at l0.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37890)
+	at Object.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:157:42391)
+	at k.clearInputs (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61637)
+	at k.exit (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61540)
+	at k.dispose (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61590)
+	at /home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:48273
+	at Array.forEach (<anonymous>)
+	at t.Dispatcher.dispose (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:48246)
+	at ai (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:699)
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:18392
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1009
+	at Object.dispose (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+	at VV._deactivate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:14727)
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12013
+	at Array.map (<anonymous>)
+	at VV._deactivateAll (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12001)
+	at VV.terminate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12354)
+	at XT.terminate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:1592)
+	at Zi (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:16313)
+	at MessagePortMain.<anonymous> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:12769)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949) setContext undefined
+2025-01-13 13:56:02.700 [error] Canceled: Canceled
+	at new D3 (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:118193)
+	at Py._remoteCall (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:124487)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:121246)
+	at l0._doExecuteCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:38451)
+	at l0.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37890)
+	at r.registerCommand.description (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37154)
+	at l0._executeContributedCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:39020)
+	at l0._doExecuteCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:38023)
+	at l0.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37890)
+	at Object.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:157:42391)
+	at y.clearInputs (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61637)
+	at y.exit (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61540)
+	at y.exit (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:58321)
+	at y.dispose (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61590)
+	at /home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:48273
+	at Array.forEach (<anonymous>)
+	at t.Dispatcher.dispose (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:48246)
+	at ai (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:699)
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:18392
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1009
+	at Object.dispose (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+	at VV._deactivate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:14727)
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12013
+	at Array.map (<anonymous>)
+	at VV._deactivateAll (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12001)
+	at VV.terminate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12354)
+	at XT.terminate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:1592)
+	at Zi (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:16313)
+	at MessagePortMain.<anonymous> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:12769)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949) setContext undefined
+2025-01-13 13:56:02.700 [error] Canceled: Canceled
+	at new D3 (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:118193)
+	at Py._remoteCall (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:124487)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:121246)
+	at l0._doExecuteCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:38451)
+	at l0.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37890)
+	at r.registerCommand.description (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37154)
+	at l0._executeContributedCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:39020)
+	at l0._doExecuteCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:38023)
+	at l0.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37890)
+	at Object.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:157:42391)
+	at r.clearInputs (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61637)
+	at r.exit (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61540)
+	at r.exit (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:58321)
+	at r.dispose (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61590)
+	at /home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:48273
+	at Array.forEach (<anonymous>)
+	at t.Dispatcher.dispose (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:48246)
+	at ai (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:699)
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:18392
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1009
+	at Object.dispose (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+	at VV._deactivate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:14727)
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12013
+	at Array.map (<anonymous>)
+	at VV._deactivateAll (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12001)
+	at VV.terminate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12354)
+	at XT.terminate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:1592)
+	at Zi (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:16313)
+	at MessagePortMain.<anonymous> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:12769)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949) setContext undefined
+2025-01-13 13:56:02.705 [info] Extension host with pid 2059 exiting with code 0
+2025-01-13 13:56:04.832 [info] Extension host with pid 2398 started
+2025-01-13 13:56:04.832 [info] Skipping acquiring lock for /home/blazzee/.config/VSCodium/User/workspaceStorage/4426f140b5c4c18cf7d99f17ae51f394.
+2025-01-13 13:56:04.857 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+2025-01-13 13:56:04.872 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-01-13 13:56:04.926 [info] Eager extensions activated
+2025-01-13 13:56:04.991 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-01-13 13:56:04.996 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-01-13 13:56:08.230 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: 'api', root cause: vscode.github
+2025-01-13 13:56:08.355 [info] ExtensionService#_doActivateExtension auiworks.amvim, startup: false, activationEvent: '*'
+2025-01-13 13:56:13.050 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-01-13 13:59:27.794 [info] ExtensionService#_doActivateExtension formulahendry.code-runner, startup: false, activationEvent: 'onStartupFinished'
+2025-01-13 14:00:06.838 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-01-13 14:00:06.869 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-01-13 14:00:06.931 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-01-13 14:01:12.819 [info] ExtensionService#_doActivateExtension ms-vscode.js-debug, startup: false, activationEvent: 'onDebugInitialConfigurations'
+2025-01-13 14:01:18.452 [info] ExtensionService#_doActivateExtension vscode.debug-server-ready, startup: false, activationEvent: 'onDebugResolve'
+2025-01-13 14:01:54.684 [info] ExtensionService#_doActivateExtension vadimcn.vscode-lldb, startup: false, activationEvent: 'onDebug'
+2025-01-13 14:01:54.783 [info] ExtensionService#_doActivateExtension franneck94.c-cpp-runner, startup: false, activationEvent: 'onLanguage:c'
+2025-01-13 14:09:57.102 [info] ExtensionService#_doActivateExtension franneck94.vscode-c-cpp-config, startup: false, activationEvent: 'onStartupFinished'
+2025-01-13 14:09:57.108 [info] ExtensionService#_doActivateExtension cschlosser.doxdocgen, startup: false, activationEvent: 'onLanguage:c'
+2025-01-13 14:19:18.217 [info] ExtensionService#_doActivateExtension KylinIdeTeam.cppdebug, startup: false, activationEvent: 'onLanguage:c'
+2025-01-13 14:20:32.946 [error] Error: [ExtensionListenerError] Extension 'cschlosser.doxdocgen' FAILED to handle event: Error: Illegal value for `line`
+	at xh.value (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:157:40524)
+	at I._deliver (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:922)
+	at I._deliverQueue (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:1013)
+	at I.fire (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:1349)
+	at VU.$acceptModelChanged (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:138:117115)
+	at Py._doInvokeHandler (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:124430)
+	at Py._invokeHandler (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:124174)
+	at Py._receiveRequest (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:122940)
+	at Py._receiveOneMessage (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:121766)
+	at xh.value (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:119865)
+	at I._deliver (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:922)
+	at I.fire (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:1242)
+	at qn.fire (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:10940)
+	at xh.value (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:14518)
+	at I._deliver (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:922)
+	at I.fire (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:1242)
+	at qn.fire (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:10940)
+	at MessagePortMain.<anonymous> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:12729)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949)
+2025-01-13 14:21:00.888 [info] Extension host terminating: renderer closed the MessagePort
+2025-01-13 14:21:00.912 [error] Canceled: Canceled
+	at new D3 (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:118193)
+	at Py._remoteCall (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:124487)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:121246)
+	at l0._doExecuteCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:38451)
+	at l0.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37890)
+	at r.registerCommand.description (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37154)
+	at l0._executeContributedCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:39020)
+	at l0._doExecuteCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:38023)
+	at l0.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37890)
+	at Object.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:157:42391)
+	at P.clearInputs (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61637)
+	at P.exit (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61540)
+	at P.exit (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:69298)
+	at P.dispose (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61590)
+	at /home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:48273
+	at Array.forEach (<anonymous>)
+	at t.Dispatcher.dispose (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:48246)
+	at ai (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:699)
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:18392
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1009
+	at Object.dispose (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+	at VV._deactivate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:14727)
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12013
+	at Array.map (<anonymous>)
+	at VV._deactivateAll (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12001)
+	at VV.terminate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12354)
+	at XT.terminate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:1592)
+	at Zi (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:16313)
+	at MessagePortMain.<anonymous> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:12769)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949) setContext undefined
+2025-01-13 14:21:00.912 [error] Canceled: Canceled
+	at new D3 (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:118193)
+	at Py._remoteCall (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:124487)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:121246)
+	at l0._doExecuteCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:38451)
+	at l0.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37890)
+	at r.registerCommand.description (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37154)
+	at l0._executeContributedCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:39020)
+	at l0._doExecuteCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:38023)
+	at l0.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37890)
+	at Object.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:157:42391)
+	at x.clearInputs (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61637)
+	at x.exit (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61540)
+	at x.dispose (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61590)
+	at /home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:48273
+	at Array.forEach (<anonymous>)
+	at t.Dispatcher.dispose (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:48246)
+	at ai (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:699)
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:18392
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1009
+	at Object.dispose (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+	at VV._deactivate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:14727)
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12013
+	at Array.map (<anonymous>)
+	at VV._deactivateAll (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12001)
+	at VV.terminate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12354)
+	at XT.terminate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:1592)
+	at Zi (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:16313)
+	at MessagePortMain.<anonymous> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:12769)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949) setContext undefined
+2025-01-13 14:21:00.912 [error] Canceled: Canceled
+	at new D3 (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:118193)
+	at Py._remoteCall (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:124487)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:121246)
+	at l0._doExecuteCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:38451)
+	at l0.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37890)
+	at r.registerCommand.description (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37154)
+	at l0._executeContributedCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:39020)
+	at l0._doExecuteCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:38023)
+	at l0.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37890)
+	at Object.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:157:42391)
+	at k.clearInputs (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61637)
+	at k.exit (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61540)
+	at k.dispose (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61590)
+	at /home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:48273
+	at Array.forEach (<anonymous>)
+	at t.Dispatcher.dispose (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:48246)
+	at ai (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:699)
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:18392
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1009
+	at Object.dispose (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+	at VV._deactivate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:14727)
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12013
+	at Array.map (<anonymous>)
+	at VV._deactivateAll (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12001)
+	at VV.terminate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12354)
+	at XT.terminate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:1592)
+	at Zi (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:16313)
+	at MessagePortMain.<anonymous> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:12769)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949) setContext undefined
+2025-01-13 14:21:00.913 [error] Canceled: Canceled
+	at new D3 (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:118193)
+	at Py._remoteCall (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:124487)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:121246)
+	at l0._doExecuteCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:38451)
+	at l0.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37890)
+	at r.registerCommand.description (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37154)
+	at l0._executeContributedCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:39020)
+	at l0._doExecuteCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:38023)
+	at l0.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37890)
+	at Object.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:157:42391)
+	at y.clearInputs (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61637)
+	at y.exit (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61540)
+	at y.exit (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:58321)
+	at y.dispose (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61590)
+	at /home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:48273
+	at Array.forEach (<anonymous>)
+	at t.Dispatcher.dispose (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:48246)
+	at ai (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:699)
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:18392
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1009
+	at Object.dispose (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+	at VV._deactivate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:14727)
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12013
+	at Array.map (<anonymous>)
+	at VV._deactivateAll (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12001)
+	at VV.terminate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12354)
+	at XT.terminate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:1592)
+	at Zi (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:16313)
+	at MessagePortMain.<anonymous> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:12769)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949) setContext undefined
+2025-01-13 14:21:00.913 [error] Canceled: Canceled
+	at new D3 (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:118193)
+	at Py._remoteCall (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:124487)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:121246)
+	at l0._doExecuteCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:38451)
+	at l0.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37890)
+	at r.registerCommand.description (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37154)
+	at l0._executeContributedCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:39020)
+	at l0._doExecuteCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:38023)
+	at l0.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37890)
+	at Object.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:157:42391)
+	at r.clearInputs (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61637)
+	at r.exit (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61540)
+	at r.exit (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:58321)
+	at r.dispose (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:61590)
+	at /home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:48273
+	at Array.forEach (<anonymous>)
+	at t.Dispatcher.dispose (/home/blazzee/.vscode-oss/extensions/auiworks.amvim-1.37.0-universal/dist/extension.js:1:48246)
+	at ai (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:699)
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:18392
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1009
+	at Object.dispose (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+	at VV._deactivate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:14727)
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12013
+	at Array.map (<anonymous>)
+	at VV._deactivateAll (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12001)
+	at VV.terminate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12354)
+	at XT.terminate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:1592)
+	at Zi (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:16313)
+	at MessagePortMain.<anonymous> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:12769)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949) setContext undefined
+2025-01-13 14:21:00.914 [error] Canceled: Canceled
+	at new D3 (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:118193)
+	at Py._remoteCall (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:124487)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:121246)
+	at l0._doExecuteCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:38451)
+	at l0.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37890)
+	at r.registerCommand.description (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37154)
+	at l0._executeContributedCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:39020)
+	at l0._doExecuteCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:38023)
+	at l0.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:115:37890)
+	at Object.executeCommand (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:157:42391)
+	at setContextValue (/home/blazzee/.vscode-oss/extensions/franneck94.c-cpp-runner-9.4.7-universal/dist/main.js:5980:28)
+	at Object.deactivate (/home/blazzee/.vscode-oss/extensions/franneck94.c-cpp-runner-9.4.7-universal/dist/main.js:3869:39)
+	at VV._deactivate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:14502)
+	at file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12013
+	at Array.map (<anonymous>)
+	at VV._deactivateAll (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12001)
+	at VV.terminate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:12354)
+	at XT.terminate (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:1592)
+	at Zi (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:16313)
+	at MessagePortMain.<anonymous> (file:///usr/share/vscodium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:175:12769)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949) setContext undefined
+2025-01-13 14:21:00.917 [info] Extension host with pid 2398 exiting with code 0
