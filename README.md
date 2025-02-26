@@ -2,16 +2,16 @@
 
 ## Screenshots
 
-![btop](markdown/btop.png)
+![btop](assets/btop.png)
 
-![cli-2](markdown/cli-2.png)
+![cli-2](assets/cli-2.png)
 
-![cli-utilities](markdown/cli-utilities.png)
+![cli-utilities](assets/cli-utilities.png)
 
-![swaync](markdown/swaync.png)
+![swaync](assets/swaync.png)
 
-![tiled](markdown/tiled.png)
+![tiled](assets/tiled.png)
 
-![tofi](markdown/tofi.png)
+![tofi](assets/tofi.png)
 
-![wlogout](markdown/wlogout.png)
+![wlogout](assets/wlogout.png)
