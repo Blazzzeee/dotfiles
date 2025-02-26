@@ -10,11 +10,11 @@
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "modules-center": ["mpris"],
   "modules-right": [
-    "network",
-    "bluetooth",
-    "pulseaudio",
     "clock",
     "clock#simpleclock",
+    "pulseaudio",
+    "network",
+    "bluetooth",
     "battery",
     "custom/power",
     "custom/notification"
@@ -105,7 +105,8 @@
  "network": {
 	 
 
-"format-wifi": "{icon} {essid}",
+"format-wifi": "{icon}",
+"tooltip-format": "{icon} {essid}",
 "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
 "format-ethernet": "{ifname} ",
 

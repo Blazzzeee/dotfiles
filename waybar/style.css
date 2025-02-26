@@ -8,7 +8,8 @@
 
 window#waybar {
   transition-property: background-color;
-  background-color: #11111b;
+  background-color: #232136;
+  color: #c4a7e7;
 }
 
 #workspaces button {
@@ -34,14 +35,9 @@ window#waybar {
   color: #f38ba8;
 }
 
-#clock,
-#pulseaudio,
 #custom-logo,
 #custom-power,
-#custom-spotify,
 #custom-notification,
-#network,
-#bluetooth,
 #memory,
 #window,
 #battery,
@@ -49,7 +45,6 @@ window#waybar {
   padding: 0.3rem 0.6rem;
   margin: 0.4rem 0.25rem;
   border-radius: 6px;
-  /* background-color: #181825; */
   background-color: #1e1e2e;
 }
 
@@ -70,15 +65,6 @@ window#waybar.empty #window {
   background-color: transparent;
 }
 
-#network {
-  color: #94e2d5;
-  font-size: 22px;
-}
-
-#bluetooth{
-	color: #94e2d5;
-	font-size: 1.5rem;
-}
 
 #memory {
   color: #cba6f7;
@@ -120,6 +106,29 @@ window#waybar.empty #window {
 
 
 tooltip {
-  background-color: #181825;
-  border: 2px solid #89b4fa;
+  background-color: #393552;
+}
+
+#network {
+    font-size : 22px;
+padding: 0.3rem 0.6rem;
+  margin: 0.4rem 0.25rem;
+}
+#bluetooth{
+    font-size : 22px;
+padding: 0.3rem 0.6rem;
+  margin: 0.4rem 0.25rem;
+}
+
+#pulseaudio{
+    font-size : 16px;
+padding: 0.3rem 0.6rem;
+  margin: 0.4rem 0.25rem;
+}
+
+
+#clock{
+    font-size : 19px;
+padding: 0.3rem 0.6rem;
+  margin: 0.4rem 0.25rem;
 }
