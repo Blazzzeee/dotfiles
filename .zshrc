@@ -1,4 +1,4 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 
@@ -15,7 +15,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
-
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 # Enable syntax highlighting
 source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -86,6 +86,9 @@ fi
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+if [[ "$TERM" == "xterm-kitty" ]]; then
+    pokemon-colorscripts --random --no-title
+fi
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -161,13 +164,12 @@ bindkey '^[q' run_ncd
 
 #bat file outputs using fzf 
 bat_files() {
-    find . -type f | fzf --preview "bat --color=always --style=numbers --line-range=:500 {} --theme=Dracula" --height 50% --layout reverse --border
+    find . -type f | fzf --preview "bat --color=always --style=numbers --line-range=:500 --theme=gruvbox-dark {}" --height 50% --layout reverse --border | xargs bat --color=always --style=numbers --line-range=:500 --theme=gruvbox-dark
 }
-#register widget
+# Register the widget
 zle -N bat_files
-#bind alt+f to bat file using fzf
+# Bind Alt+f to the bat_files function using fzf
 bindkey '^[f' bat_files
-
 
 
 #view file trees using fzf and eza
