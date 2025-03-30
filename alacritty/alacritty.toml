@@ -1,0 +1,12 @@
+[general]
+    import = ["colors.toml",]
+[window]
+    dynamic_padding = true
+    opacity = 1.0
+[font]
+    normal = { family = "MesloLGS NF"}    
+    bold = { family = "MesloLGS NF", style = "Bold" }
+    italic = { family = "MesloLGS NF", style = "Italic" }
+    bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
+    size = 18.0
+
