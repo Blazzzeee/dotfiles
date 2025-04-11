@@ -69,9 +69,8 @@ my_battery_widget:connect_signal("upower::update", function(widget, device)
         end
     end
 
-    -- Update the widgets' markup
     icon_widget.markup = string.format(
-        "<span font='DaddyTimeMono NF 30' foreground='%s'>%s</span>",
+        "<span font='DaddyTimeMono NF 30' foreground='%s'> %s</span>",
         color, icon
     )
 

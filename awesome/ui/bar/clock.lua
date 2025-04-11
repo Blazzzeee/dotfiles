@@ -4,7 +4,7 @@ local colors = require("ui.colors")
 -- Create the base clock widget
 local mytextclock = wibox.widget {
     format = "|    %H : %M ",
-    font   = "DaddyTimeMono NF 18",
+    font   = "DaddyTimeMono NF 16",
     align  = "center",
     valign = "center",
     widget = wibox.widget.textclock,

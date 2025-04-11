@@ -3,6 +3,7 @@ local wibox = require("wibox")
 local taglist = require("ui.bar.taglist")
 local battery = require("ui.bar.battery")
 local colors = require("ui.colors")
+local network = require("ui.bar.network")
 
 modkey = "Mod4"
 
@@ -51,6 +52,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
         nil,
         {
             layout = wibox.layout.fixed.horizontal,
+            network,
             battery,
             mytextclock,
         },
