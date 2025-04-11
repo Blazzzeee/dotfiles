@@ -1,9 +1,9 @@
 local wibox = require("wibox")
 local gears = require("gears")
-
+local colors = require("ui.colors")
 -- Create the base clock widget
 local mytextclock = wibox.widget {
-    format = " %H : %M ",
+    format = "|    %H : %M ",
     font   = "DaddyTimeMono NF 18",
     align  = "center",
     valign = "center",
@@ -18,8 +18,7 @@ local styled_clock = wibox.widget {
         bottom = 6,
         widget = wibox.container.margin,
     },
-    bg     = "#393552", -- Background color
-    fg     = "#bfc9db", -- Text color
+    fg     = colors.white,
     shape  = function(cr, w, h) return gears.shape.rounded_rect(cr, w, h, 10) end,
     widget = wibox.container.background,
 }

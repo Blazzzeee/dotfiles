@@ -1,6 +1,8 @@
 local awful = require("awful")
 local wibox = require("wibox")
 
+local colors = require("ui.colors")
+
 local taglist = {}
 
 taglist.create = function(s, modkey)
@@ -8,8 +10,9 @@ taglist.create = function(s, modkey)
         screen          = s,
         filter          = awful.widget.taglist.filter.noempty,
         style           = {
-            bg = "#0f0f17",
-            bg_focus = "#44415a",
+            --deperecated
+            bg = colors.black,
+            bg_focus = colors.one_bg3,
             squares_sel = "",
             squares_unsel = "",
         },
@@ -41,17 +44,25 @@ taglist.create = function(s, modkey)
             id              = "background_role",
             widget          = wibox.container.background,
             create_callback = function(self, t, index, tags)
-                self.bg = "#232136"
-                self.normal = "#232136"
-                self.hover = "#44415a"
+                self.bg = colors.black
                 self:connect_signal("mouse::enter", function()
-                    self.bg = self.hover
+                    self.bg = colors.one_bg3
                 end)
                 self:connect_signal("mouse::leave", function()
                     if not t.selected then
-                        self.bg = self.normal
+                        self.bg = self.black
                     end
                 end)
+            end,
+
+            --fix doesnt work
+            update_callback = function(self, t, index, tags)
+                if t.selected then
+                    print("update_callback for tag:", t.name, "selected:", t.selected)
+                    self.bg = colors.light_grey
+                else
+                    self.bg = colors.black
+                end
             end
         }
     }

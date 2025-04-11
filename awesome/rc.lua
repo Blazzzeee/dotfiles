@@ -125,7 +125,7 @@ end) ]]
 -- }}}
 
 -- {{{ Wibar
-require("bar")
+require("ui.bar")
 -- }}}
 
 -- {{{ Mouse bindings

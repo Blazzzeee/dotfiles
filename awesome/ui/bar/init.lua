@@ -1,6 +1,8 @@
 local awful = require("awful")
 local wibox = require("wibox")
-local taglist = require("bar.taglist")
+local taglist = require("ui.bar.taglist")
+local battery = require("ui.bar.battery")
+local colors = require("ui.colors")
 
 modkey = "Mod4"
 
@@ -27,27 +29,29 @@ screen.connect_signal("request::desktop_decoration", function(s)
     -----------------------------------------------------------------------------
 
     s.bar = awful.wibar {
-        bg       = "#232136",
         position = "top",
+        bg       = colors.statusline_bg,
         screen   = s,
         visible  = true,
         ontop    = false,
         width    = 1920,
-        height   = 40,
+        height   = 60,
         type     = "dock",
     }
-    local mytextclock = require("bar.clock")
+    local mytextclock = require("ui.bar.clock")
+
+
+
     s.bar:setup {
         layout = wibox.layout.align.horizontal,
         {
             layout = wibox.layout.fixed.horizontal,
             s.mytaglist,
         },
+        nil,
         {
             layout = wibox.layout.fixed.horizontal,
-        },
-        {
-            layout = wibox.layout.fixed.horizontal,
+            battery,
             mytextclock,
         },
     }
