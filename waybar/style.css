@@ -104,7 +104,7 @@ padding: 0.3rem 0.6rem;
 #clock {
     margin: 15px 0px 0px 0px;
     font-family: "monospace";
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     color: #ffffff;
     transition: transform 0.5s ease-in-out;
@@ -119,3 +119,33 @@ transition: opacity 0.3s ease-in-out;
     font-size: 20px;
 }
 
+#mpris {
+    color: #b4befe;
+    padding: 0 12px;
+    margin: 0 4px;
+    border-radius: 8px;
+    background: rgba(180, 190, 254, 0.1);
+    transition: all 0.3s ease;
+    min-width: 100px;
+}
+
+#mpris:hover {
+    background: rgba(180, 190, 254, 0.2);
+
+}
+
+#mpris.playing {
+    color: #a6e3a1;
+    background: rgba(166, 227, 161, 0.1);
+
+}
+
+#mpris.paused {
+    color: #f9e2af;
+    background: rgba(249, 226, 175, 0.1);
+}
+
+#mpris.stopped {
+    color: #6c7086;
+    background: rgba(249, 226, 175, 0.1);
+}

@@ -8,7 +8,7 @@
   "passthrough": false,
   "fixed-center": true,
   "modules-left": ["hyprland/workspaces", "clock"],
-  "modules-center": [""],
+  "modules-center": ["mpris"],
   "modules-right": [
     "pulseaudio",
     "network",
@@ -146,8 +146,36 @@
 "format-icons": {
   "default": "<span color='#f6c177'></span>",
   "performance": "<span color='#f6c177'></span>",
-  "balanced": "<span color='#c4a7e7'></span>",
-  "power-saver": "<span color='#31748f'></span>"
+  "balanced": "<span color='#eb6f92'></span>",
+  "power-saver": "<span color='#9ccfd8'></span>"
 }
-}
+},
+
+"mpris": {
+    "format": "{player_icon} {title} - {artist}",
+    "format-paused": "{player_icon} {title} - {artist}",
+    "format-icons": {
+      "Playing": "󰏤",
+      "Paused": "󰐊",
+      "Stopped": "󰐊"
+    },
+    "player-icons": {
+      "default": "",
+      "spotify": "",
+      "firefox": "",
+      "chrome": "",
+      "vlc": "󰕼"
+    },
+    "max-length": 30,
+    "return-type": "json",
+    "interval": 1,
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "on-click-middle": "playerctl previous",
+    "on-scroll-up": "playerctl position 5+",
+    "on-scroll-down": "playerctl position 5-",
+    "tooltip": false
+  },
+
+
 }
