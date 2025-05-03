@@ -42,8 +42,8 @@ if ! command -v wpctl &>/dev/null; then
 fi
 
 case $ACTION in
-    inc) wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ $STEP+ ;;
-    dec) wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ $STEP- ;;
+    inc) wpctl set-volume -l 2.0 @DEFAULT_AUDIO_SINK@ $STEP+ ;;
+    dec) wpctl set-volume -l 2.0 @DEFAULT_AUDIO_SINK@ $STEP- ;;
     toggle) wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle ;;
 esac
 

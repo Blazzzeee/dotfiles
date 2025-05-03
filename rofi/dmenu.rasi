@@ -30,7 +30,7 @@ listview {
     lines:      5;
 }
 entry {
-    expand:     false;
+    expand:     true;
     width:      10em;
 }
 element {

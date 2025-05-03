@@ -1,0 +1,12 @@
+[[language]]
+name = "c"
+auto-format = false
+language-id = "c"
+language-servers = ["clangd"]
+
+
+[[language]]
+name = "python"
+auto-format = false
+language-id = "python"
+language-servers = ["pyright"]
