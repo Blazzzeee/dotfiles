@@ -11,7 +11,8 @@
     }
 
 window {
-location:northeast;
+    height : 200;
+    location:northeast;
     width: 20%;
     children: [ box ];
 }
@@ -27,7 +28,7 @@ entry {
     expand: false;
 	border-color: #000000;
     border: 0 0 2 0;
-text-color: @al;
+    text-color: @al;
 }
 
 element {
@@ -46,7 +47,7 @@ element-text, element-icon {
 
 listview {
     fixed-height: false;
-    padding: 0;
+    padding: 0 30;
     scrollbar: true;
 }
 

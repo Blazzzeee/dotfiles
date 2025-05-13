@@ -7,13 +7,14 @@
   "gtk-layer-shell": true,
   "passthrough": false,
   "fixed-center": true,
-  "modules-left": ["hyprland/workspaces", "clock"],
+  "modules-left": [ "dwl/tags",  ],
   "modules-center": ["mpris"],
   "modules-right": [
     "pulseaudio",
     "network",
     "bluetooth",
     "power-profiles-daemon",
+    "clock",
     "battery",
     "custom/power",
     "custom/notification"
@@ -35,6 +36,13 @@
     }
   },
 
+  "dwl/tags": {
+    "format": "{icon}",
+    "icon": true,
+    "icon-size": 24
+  },
+
+    
   "tray": {
     "show-passive-items": true,
     "spacing": 10
@@ -76,7 +84,7 @@
     "format-connected": "󰂱 {num_connections}",
     "tooltip-format-connected": "{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-    "on-click": "blueman-manager"
+    "on-click": "~/.config/hypr/scripts/bzmenu -l custom --launcher-command 'rofi -dmenu -theme ~/.config/rofi/wifi/config.rasi -matching fuzzy'"
   },
 
   "custom/power": {
@@ -92,7 +100,7 @@
     "format-ethernet": "{ifname} ",
     "format-disconnected": "",
     "max-length": 50,
-    "on-click": "network_manager"
+    "on-click": "~/.config/hypr/scripts/nm_ui"
   },
 
   "custom/notification": {
