@@ -7,8 +7,8 @@
   "gtk-layer-shell": true,
   "passthrough": false,
   "fixed-center": true,
-  "modules-left": [ "dwl/tags",  ],
-  "modules-center": ["mpris"],
+  "modules-left": ["custom/distrologo", "dwl/tags"  ],
+  "modules-center": ["mpris" ],
   "modules-right": [
     "pulseaudio",
     "network",
@@ -37,9 +37,22 @@
   },
 
   "dwl/tags": {
-    "format": "{icon}",
-    "icon": true,
-    "icon-size": 24
+  "format": "{tag}",
+  "tag-labels": [
+    "[  ]",  
+    "[  ]",  
+    "[  ]",  
+    "[  ]",  
+    "[  ]",  
+    "[  ]"   
+  ],
+  "num-tags": 6
+},
+
+  "custom/distrologo": {
+    "format":"󰣇",
+    "tooltip":true,
+    "tooltip-format":"I use Arch BTW",
   },
 
     
@@ -94,7 +107,7 @@
   },
 
   "network": {
-    "format-wifi": "{icon}",
+    "format-wifi": "{icon} {essid}",
     "tooltip-format": "{icon} {essid}",
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "format-ethernet": "{ifname} ",
@@ -160,21 +173,13 @@
 },
 
 "mpris": {
-    "format": "{player_icon} {title} - {artist}",
-    "format-paused": "{player_icon} {title} - {artist}",
-    "format-icons": {
-      "Playing": "󰏤",
-      "Paused": "󰐊",
-      "Stopped": "󰐊"
+    "format": "[ {status_icon} {title:10} ]",
+    "status-icons": {
+      "playing": "󰏤",
+      "paused": "󰐊",
+      "stopped": "󰐊"
     },
-    "player-icons": {
-      "default": "",
-      "spotify": "",
-      "firefox": "",
-      "chrome": "",
-      "vlc": "󰕼"
-    },
-    "max-length": 30,
+    
     "return-type": "json",
     "interval": 1,
     "on-click": "playerctl play-pause",
@@ -182,8 +187,11 @@
     "on-click-middle": "playerctl previous",
     "on-scroll-up": "playerctl position 5+",
     "on-scroll-down": "playerctl position 5-",
-    "tooltip": false
-  },
+    "tooltip": false,
+ },
 
 
-}
+},
+
+
+

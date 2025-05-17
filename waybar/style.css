@@ -1,23 +1,25 @@
+@import "nord.css";
+
 * {
   font-family: Lexend, "JetBrainsMono NFP";
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
+  color: @nord5;
 }
 
 window#waybar {
   transition-property: background-color;
-  background-color: rgba(30, 30, 46, 0.25); 
-  color: #e0def4;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
+  background-color: rgba(46, 52, 64, 0.85);
+  color: @nord5;
   margin: 6px;
 }
 
 #workspaces {
-    margin: 5px 5px;
+   margin: 5px 5px;
   padding: 15px 12px;
-    border-radius: 16px;
+  border-radius: 16px;
   border: solid 0px #cdd6f4;
+  background-color: #434c5e;
 }
 #workspaces button {
     padding: 0px 2px;
@@ -56,17 +58,8 @@ window#waybar {
   border-radius: 6px;
 }
 
-
-window#waybar.empty #window {
-  background-color: transparent;
-}
-
-#window {
-  color: #cdd6f4;
-}
-
 #pulseaudio {
-  color: #b4befe;
+  color: @nord8;
 }
 
 #pulseaudio.muted {
@@ -74,27 +67,29 @@ window#waybar.empty #window {
 }
 
 #custom-power {
-  color: #f38ba8;
+  color: @nord11;
 }
 
 #custom-notification{
-    color: #74c7ec;
+    color: @nord7;
     font-size: 22px;
+    padding: 0 15 0 0;
 }
 
 
 tooltip {
-background-color: #181825;
+    background-color: @nord0;
+    font-weight: 700;
 }
 
 #network {
-    font-size : 22px;
-padding: 0.3rem 0.2rem;
+  font-size : 18px;
+  padding: 0.3rem 0.2rem;
   margin: 0.4rem 0.25rem;
 }
 #bluetooth{
-    font-size : 22px;
-padding: 0.3rem 0.2rem;
+  font-size : 22px;
+  padding: 0.3rem 0.2rem;
   margin: 0.4rem 0.25rem;
 }
 
@@ -104,86 +99,80 @@ padding: 0.3rem 0.2rem;
     margin: 0.4rem 0.25rem;
     font-family: "monospace";
     font-size: 25px;
-    font-weight: bold;
-    color: #ffffff;
+    font-weight: 900;
     transition: transform 0.5s ease-in-out;
 }
 
 #clock:hover {
-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 #power-profiles-daemon{
-padding: 0.3rem 0.2rem;
+  padding: 0.3rem 0.2rem;
   margin: 0.4rem 0.25rem;
-    font-size: 20px;
+  font-size: 20px;
 }
 
 #mpris {
+    font-size: 14px; 
     color: #b4befe;
     padding: 0 12px;
-    margin: 0 4px;
+    margin: 8 4px;
     border-radius: 8px;
     background: rgba(180, 190, 254, 0.1);
     transition: all 0.3s ease;
     min-width: 100px;
 }
 
-#mpris:hover {
-    background: rgba(180, 190, 254, 0.2);
-
-}
-
 #mpris.playing {
-    color: #a6e3a1;
+    color: @nord14;
     background: rgba(166, 227, 161, 0.1);
-
 }
 
 #mpris.paused {
-    color: #f9e2af;
+    color: @nord13;
     background: rgba(249, 226, 175, 0.1);
 }
 
 #mpris.stopped {
-    color: #6c7086;
+    color: @nord11;
     background: rgba(249, 226, 175, 0.1);
 }
 
-
-
 #tags {
-    margin: 5px 5px;
-  padding: 15px 12px;
-    border-radius: 16px;
-  border: solid 0px #cdd6f4;
+  border-radius: 8px;
+  padding: 4px 8px;
 }
 
 #tags button {
-    padding: 0px 2px;
-    margin: 0px 3px;
-    border-radius: 16px;
-    color: #2f354a;
-    background-color: #2f354a;
-    min-width: 12px;
-    transition: all 0.3s ease-in-out;
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 14px;
+  padding: 4px 6px;
+  margin: 2px;
+  color: @nord5;
+  background-color: transparent;
+  border: none;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+#tags button:hover {
+  background-color: @nord3;
+  color: @nord6;
 }
 
 #tags button.focused {
-    color: #cdd6f4;
-    background-color: #cdd6f4;
-    border-radius: 16px;
-    min-width: 40px;
-    transition: all 0.3s ease-in-out;
+  background-color: @nord9; 
+  color: @nord6;              
+  border-radius: 6px;
+  font-weight: bold;
+  box-shadow: 0 0 0 2px @nord0 inset;
 }
-
-
-
-#tags button:hover {
-    background-color: #cdd6f4;
-    color: #cdd6f4;
-    border-radius: 16px;
-    min-width: 50px;
+#custom-distrologo {
+  padding: 0.4rem 0.6rem;
+  margin: 0.4rem 0.25rem;
+  border-radius: 6px;
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 22px;
+  color: @nord8;
 }
-
-
