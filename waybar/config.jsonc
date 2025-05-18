@@ -15,6 +15,7 @@
     "bluetooth",
     "power-profiles-daemon",
     "clock",
+    "custom/screenshot",
     "battery",
     "custom/power",
     "custom/notification"
@@ -53,8 +54,15 @@
     "format":"󰣇",
     "tooltip":true,
     "tooltip-format":"I use Arch BTW",
+    "on-click": "rofi -show drun"
   },
 
+  "custom/screenshot": {
+    "format":" ",
+    "tooltip":true,
+    "tooltip-format":"Screenshot",
+    "on-click": "~/.config/rofi/applets/screenshot.sh"
+  },
     
   "tray": {
     "show-passive-items": true,
@@ -102,7 +110,7 @@
 
   "custom/power": {
     "tooltip": false,
-    "on-click": "wlogout --layout /usr/share/wlogout/layout --css /usr/share/wlogout/style.css -b 6",
+    "on-click": "~/.config/rofi/powermenu/powermenu.sh",
     "format": "⏻"
   },
 
@@ -138,7 +146,7 @@
   },
 
 "clock": {
-  "format": "{:%H:%M}",
+  "format": "[ {:%H:%M} ]",
   "interval": 60,
   "format-alt": "{:%b %d %Y}",
   "tooltip": true,

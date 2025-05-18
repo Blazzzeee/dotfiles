@@ -176,3 +176,12 @@ tooltip {
   font-size: 22px;
   color: @nord8;
 }
+
+#custom-screenshot {
+  padding: 0.4rem 0rem;
+  margin: 0.4rem 0rem;
+  /* border-radius: 6px; */
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 22px;
+  color: @nord5;
+}
