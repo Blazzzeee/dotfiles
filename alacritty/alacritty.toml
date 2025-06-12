@@ -3,6 +3,8 @@
 [window]
     dynamic_padding = true
     opacity = 0.75
+    decorations = "None"
+    blur = true
 [font]
     normal = { family = "JetBrainsMono Nerd Font"}    
     bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
