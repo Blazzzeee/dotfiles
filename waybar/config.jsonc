@@ -76,11 +76,10 @@
     "format-full": "<span font='font awesome 5 free'></span>  <span font='font awesome 5 free 11'>{icon}</span>  charged",
     "interval": 30,
     "states": {
-      "warning": 25,
+      "warning": 15,
       "critical": 10
     },
     "tooltip": false,
-    "on-click": "2"
   },
 
   "pulseaudio": {

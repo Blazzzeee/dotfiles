@@ -7,6 +7,7 @@
   color: @nord5;
 }
 
+
 window#waybar {
   transition-property: background-color;
   background-color: rgba(46, 52, 64, 0.85);
@@ -180,7 +181,6 @@ tooltip {
 #custom-screenshot {
   padding: 0.4rem 0rem;
   margin: 0.4rem 0rem;
-  /* border-radius: 6px; */
   font-family: "JetBrainsMono Nerd Font", monospace;
   font-size: 22px;
   color: @nord5;
