@@ -12,7 +12,8 @@
     }
 
 window {
-location:northeast;
+    height: 200;
+    location:northeast;
     width: 20%;
     children: [ box ];
 }
@@ -47,7 +48,8 @@ element-text, element-icon {
 
 listview {
     fixed-height: false;
-    padding: 0;
+    padding: 0 30;
+    scrollbar: true;
 }
 
 

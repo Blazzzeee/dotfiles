@@ -4,6 +4,7 @@ configuration {
   show-icons: false;
   drun-display-format: "{name}";
   font: "JetBrains Mono 16";
+      listview-hover-select: true;
 } 
 *{
     background-color:      #181926;
@@ -13,8 +14,9 @@ configuration {
 window {
     height: 4.6%;
     anchor: north;
+    y-offset: -4.7%;
+    location: northwest;
     width:100%;
-    location:north ;
     padding: 4px;
     children:   [ horibox ];
 }
@@ -25,9 +27,10 @@ horibox {
 listview {
     layout:     horizontal;
     spacing:    10px;
+    lines:      5;
 }
 entry {
-    expand:     false;
+    expand:     true;
     width:      10em;
 }
 element {
