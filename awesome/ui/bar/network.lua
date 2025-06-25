@@ -22,13 +22,13 @@ local styled = wibox.widget {
         widget = wibox.container.margin,
 
     },
-    fg = colors.blue,
+    fg = colors.nord4,
     widget = wibox.container.background,
 }
 
 styled:buttons(gears.table.join(
     awful.button({}, 1, function()
-        awful.spawn("network_manager")
+        awful.spawn("/home/eliot/.config/scripts/nm_ui")
     end)
 ))
 

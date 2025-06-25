@@ -2,7 +2,7 @@
     import = ["colors.toml",]
 [window]
     dynamic_padding = true
-    #opacity = 0.75
+    opacity = 0.75
     decorations = "None"
     blur = true
 [font]

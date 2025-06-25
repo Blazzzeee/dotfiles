@@ -1,6 +1,5 @@
 local awful = require("awful")
 local wibox = require("wibox")
-
 local colors = require("ui.colors")
 
 local taglist = {}
@@ -8,14 +7,9 @@ local taglist = {}
 taglist.create = function(s, modkey)
     return awful.widget.taglist {
         screen          = s,
-        filter          = awful.widget.taglist.filter.noempty,
-        style           = {
-            --deperecated
-            bg = colors.black,
-            bg_focus = colors.one_bg3,
-            squares_sel = "",
-            squares_unsel = "",
-        },
+        filter          = function(t)
+            return t.index <= 7
+        end,
         buttons         = {
             awful.button({}, 1, function(t) t:view_only() end),
             awful.button({ modkey }, 1, function(t)
@@ -35,34 +29,67 @@ taglist.create = function(s, modkey)
         widget_template = {
             {
                 {
-                    id     = "text_role",
+                    id     = "icon_text",
                     widget = wibox.widget.textbox,
                 },
-                margins = 12,
+                margins = 6,
                 widget  = wibox.container.margin,
             },
             id              = "background_role",
             widget          = wibox.container.background,
+
             create_callback = function(self, t, index, tags)
-                self.bg = colors.black
+                local text_widget = self:get_children_by_id("icon_text")[1]
+                text_widget.font = "JetBrainsMono Nerd Font 10"
+
+                local icons = {
+                    [1] = "[   ]",
+                    [2] = "   ",
+                    [3] = "  ",
+                    [4] = "  ",
+                    [5] = "  ",
+                    [6] = "  ",
+                    [7] = "  ",
+                }
+
+                local icon = icons[index] or "" -- No fallback, empty for tags > 6
+                text_widget.markup = "<span foreground='" .. colors.nord4 .. "'>" .. icon .. "</span>"
+
+                self.bg = t.selected and colors.nord10 or colors.nord0
+
                 self:connect_signal("mouse::enter", function()
-                    self.bg = colors.one_bg3
+                    if not t.selected then
+                        self.bg = colors.nord2
+                    end
                 end)
                 self:connect_signal("mouse::leave", function()
                     if not t.selected then
-                        self.bg = self.black
+                        self.bg = colors.nord0
                     end
                 end)
             end,
 
-            --fix doesnt work
             update_callback = function(self, t, index, tags)
+                local text_widget = self:get_children_by_id("icon_text")[1]
+                text_widget.font = "JetBrainsMono Nerd Font 10"
+
+                local icons = {
+                    [1] = "  ",
+                    [2] = "   ",
+                    [3] = "  ",
+                    [4] = "  ",
+                    [5] = "  ",
+                    [6] = "  ",
+                    [7] = "  ",
+                }
+
+                local icon = icons[index] or ""
                 if t.selected then
-                    print("update_callback for tag:", t.name, "selected:", t.selected)
-                    self.bg = colors.light_grey
-                else
-                    self.bg = colors.black
+                    icon = "[" .. icon .. "]" -- Wrap icon in square brackets
                 end
+                text_widget.markup = "<span foreground='" ..
+                    (t.selected and colors.nord6 or colors.nord4) .. "'>" .. icon .. "</span>"
+                self.bg = t.selected and colors.nord10 or colors.nord0
             end
         }
     }

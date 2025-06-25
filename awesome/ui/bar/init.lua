@@ -4,6 +4,12 @@ local taglist = require("ui.bar.taglist")
 local battery = require("ui.bar.battery")
 local colors = require("ui.colors")
 local network = require("ui.bar.network")
+local distro = require("ui.bar.distro")
+local power = require("ui.bar.power")
+local bluetooth = require("ui.bar.bluetooth")
+local layoutState = require("ui.bar.layout")
+local profiles = require("ui.bar.profiles")
+local capture = require("ui.bar.capture")
 
 modkey = "Mod4"
 
@@ -31,7 +37,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
 
     s.bar = awful.wibar {
         position = "top",
-        bg       = colors.statusline_bg,
+        bg       = colors.nord0,
         screen   = s,
         visible  = true,
         ontop    = false,
@@ -46,15 +52,26 @@ screen.connect_signal("request::desktop_decoration", function(s)
     s.bar:setup {
         layout = wibox.layout.align.horizontal,
         {
+            distro,
             layout = wibox.layout.fixed.horizontal,
             s.mytaglist,
+            layoutState,
         },
-        nil,
+
+        {
+            layout = wibox.layout.align.horizontal,
+            nil,      -- left: empty space
+            profiles, -- center: your power profile widget (centered)
+            nil,      -- right: empty space
+        },
         {
             layout = wibox.layout.fixed.horizontal,
+            capture,
+            bluetooth,
             network,
             battery,
             mytextclock,
+            power,
         },
     }
 end)

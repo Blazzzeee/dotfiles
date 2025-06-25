@@ -13,7 +13,7 @@ local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
-local naughty = require("naughty")
+-- local naughty = require("naughty")
 -- Declarative object management
 local ruled = require("ruled")
 local menubar = require("menubar")
@@ -26,13 +26,14 @@ require("awful.hotkeys_popup.keys")
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
 -- @DOC_ERROR_HANDLING@
-naughty.connect_signal("request::display_error", function(message, startup)
-    naughty.notification {
-        urgency = "critical",
-        title   = "Oops, an error happened" .. (startup and " during startup!" or "!"),
-        message = message
-    }
-end)
+-- naughty.connect_signal("request::display_error", function(message, startup)
+--     naughty.notification {
+--         urgency = "critical",
+--         title   = "Oops, an error happened" .. (startup and " during startup!" or "!"),
+--         message = message
+--     }
+-- end)
+
 -- }}}
 
 -- {{{ Variable definitions
@@ -43,7 +44,7 @@ beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 -- @DOC_DEFAULT_APPLICATIONS@
 -- This is used later as the default terminal and editor to run.
 
-terminal = "kitty"
+terminal = "alacritty"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -84,23 +85,20 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- {{{ Tag layout
 -- @DOC_LAYOUT@
 -- Table of layouts to cover with awful.layout.inc, order matters.
-tag.connect_signal("request::default_layouts", function()
-    awful.layout.append_default_layouts({
-        awful.layout.suit.floating,
-        awful.layout.suit.tile,
-        awful.layout.suit.tile.left,
-        awful.layout.suit.tile.bottom,
-        awful.layout.suit.tile.top,
-        awful.layout.suit.fair,
-        awful.layout.suit.fair.horizontal,
-        awful.layout.suit.spiral,
-        awful.layout.suit.spiral.dwindle,
-        awful.layout.suit.max,
-        awful.layout.suit.max.fullscreen,
-        awful.layout.suit.magnifier,
-        awful.layout.suit.corner.nw,
-    })
-end)
+awful.layout.layouts = {
+    awful.layout.suit.tile,
+    awful.layout.suit.floating,
+    awful.layout.suit.fair,
+    awful.layout.suit.spiral,
+    awful.layout.suit.spiral.dwindle,
+    awful.layout.suit.max,
+    awful.layout.suit.max.fullscreen,
+    awful.layout.suit.magnifier,
+    awful.layout.suit.corner.nw,
+}
+
+local layout_popup = require("ui.popup")
+
 -- }}}
 
 -- {{{ Wallpaper
@@ -163,7 +161,7 @@ awful.keyboard.append_global_keybindings({
         { description = "lua execute prompt", group = "awesome" }),
     awful.key({ modkey, }, "Return", function() awful.spawn(terminal) end,
         { description = "open a terminal", group = "launcher" }),
-    awful.key({ modkey }, "o", function() awful.spawn.with_shell("rofi -show drun") end,
+    awful.key({ modkey }, "o", function() awful.spawn.with_shell("dmenu_run -c") end,
         { description = "App launcher", group = "launcher" }),
 
     awful.key({ modkey }, "r", function() awful.spawn.with_shell("rofi -run") end,
@@ -191,7 +189,32 @@ awful.keyboard.append_global_keybindings({
         if client.focus then
             client.focus:kill()
         end
-    end, { description = "close focused window", group = "client" })
+    end, { description = "close focused window", group = "client" }),
+
+    -- Brightness Up (e.g., XF86MonBrightnessUp or your custom key)
+    awful.key({}, "XF86MonBrightnessUp", function()
+        awful.spawn("/home/eliot/.config/scripts/brightness.sh inc ")
+    end, { description = "increase brightness", group = "custom" }),
+
+    -- Brightness Down
+    awful.key({}, "XF86MonBrightnessDown", function()
+        awful.spawn("/home/eliot/.config/scripts/brightness.sh dec ")
+    end, { description = "decrease brightness", group = "custom" }),
+
+    -- Volume Up
+    awful.key({}, "XF86AudioRaiseVolume", function()
+        awful.spawn("/home/eliot/.config/scripts/volume.sh inc 10")
+    end, { description = "increase volume", group = "custom" }),
+
+    -- Volume Down
+    awful.key({}, "XF86AudioLowerVolume", function()
+        awful.spawn("/home/eliot/.config/scripts/volume.sh dec 10")
+    end, { description = "decrease volume", group = "custom" }),
+
+    -- Volume Mute
+    awful.key({}, "XF86AudioMute", function()
+        awful.spawn("/home/eliot/.config/scripts/volume.sh toggle")
+    end, { description = "toggle mute", group = "custom" }),
 })
 
 -- Tags related keybindings
@@ -261,8 +284,10 @@ awful.keyboard.append_global_keybindings({
         { description = "increase the number of columns", group = "layout" }),
     awful.key({ modkey, "Control" }, "l", function() awful.tag.incncol(-1, nil, true) end,
         { description = "decrease the number of columns", group = "layout" }),
-    awful.key({ modkey, }, "space", function() awful.layout.inc(1) end,
-        { description = "select next", group = "layout" }),
+    awful.key({ modkey }, "space", function()
+        awful.layout.inc(1)
+        layout_popup.show()
+    end, { description = "select next layout (with popup)", group = "layout" }),
     awful.key({ modkey, "Shift" }, "space", function() awful.layout.inc(-1) end,
         { description = "select previous", group = "layout" }),
 })
@@ -499,20 +524,20 @@ end)
 
 -- {{{ Notifications
 
-ruled.notification.connect_signal('request::rules', function()
-    -- All notifications will match this rule.
-    ruled.notification.append_rule {
-        rule       = {},
-        properties = {
-            screen           = awful.screen.preferred,
-            implicit_timeout = 5,
-        }
-    }
-end)
+-- ruled.notification.connect_signal('request::rules', function()
+--     -- All notifications will match this rule.
+--     ruled.notification.append_rule {
+--         rule       = {},
+--         properties = {
+--             screen           = awful.screen.preferred,
+--             implicit_timeout = 5,
+--         }
+--     }
+-- end)
 
-naughty.connect_signal("request::display", function(n)
-    naughty.layout.box { notification = n }
-end)
+-- naughty.connect_signal("request::display", function(n)
+--     -- naughty.layout.box { notification = n }
+-- end)
 
 -- }}}
 
@@ -521,7 +546,45 @@ client.connect_signal("mouse::enter", function(c)
     c:activate { context = "mouse_enter", raise = false }
 end)
 
+-- Application rules
+awful.rules.rules = {
+    -- Terminal apps (Alacritty, Kitty) → Tag 1
+    {
+        rule_any = { class = { "Alacritty", "kitty" } },
+        properties = { tag = "1" }
+    },
 
+    -- Code editors (Neovim in terminal, Helix, GUI editors) → Tag 2
+    {
+        rule_any = { class = { "helix" }, name = { "nvim", "Neovim" } },
+        properties = { tag = "2" }
+    },
+
+    -- Browsers (Chromium, Brave, Firefox) → Tag 3
+    {
+        rule_any = { class = { "Chromium", "Brave-browser", "firefox" } },
+        properties = { tag = "3" }
+    },
+
+    -- File managers (Thunar, Yazi in terminal) → Tag 4
+    {
+        rule_any = { class = { "Thunar" }, name = { "yazi" } },
+        properties = { tag = "4" }
+    },
+
+    -- Music apps (Spotify) → Tag 5
+    {
+        rule = { class = "Spotify" },
+        properties = { tag = "5" }
+    },
+
+    -- Settings/tools → Tag 6 (optional placeholder)
+    -- You can manually assign system tools here if needed
+
+    -- Chat/misc apps → Tag 7
+    -- Add apps like Discord, Slack here if needed
+}
 --startup
 awful.spawn.with_shell("picom -b --config $HOME/.config/picom/picom.conf")
+awful.spawn.with_shell("pkill dunst; dunst -config /home/eliot/.config/dunst/dunstrc &")
 awful.spawn.with_shell("nitrogen --restore")
