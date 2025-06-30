@@ -12,23 +12,21 @@ window#waybar {
   transition-property: background-color;
   background-color: rgba(46, 52, 64, 0.85);
   color: @nord5;
-  margin: 6px;
 }
 
 #workspaces {
-   margin: 5px 5px;
-  padding: 15px 12px;
+  margin: 2.5px 2px;
+  padding: 15px 3px;
   border-radius: 16px;
   border: solid 0px #cdd6f4;
-  background-color: #434c5e;
+  background-color:transparent;
 }
 #workspaces button {
-    padding: 0px 2px;
-    margin: 0px 3px;
-    border-radius: 16px;
+    padding: 0px 0px;
+    margin: 0px 2px;
+    border-radius: 10px;
     color: #2f354a;
-    background-color: #2f354a;
-    min-width: 12px;
+    background-color: rgba(76, 86, 106, 0.6);
     transition: all 0.3s ease-in-out;
 }
 
@@ -36,30 +34,19 @@ window#waybar {
     color: #cdd6f4;
     background-color: #cdd6f4;
     border-radius: 16px;
-    min-width: 40px;
+    min-width: 50px;
     transition: all 0.3s ease-in-out;
 }
 
 #workspaces button:hover {
     background-color: #cdd6f4;
     color: #cdd6f4;
-    border-radius: 16px;
-  min-width: 50px;
-}
-
-#custom-logo,
-#custom-power,
-#custom-notification,
-#memory,
-#window,
-#battery,
-#mpris {
-  padding: 0.3rem 0.6rem;
-  margin: 0.4rem 0.25rem;
-  border-radius: 6px;
+    min-width: 50px;
 }
 
 #pulseaudio {
+  padding: 0rem 0rem;
+  margin: 0rem 0.25rem;
   color: @nord8;
 }
 
@@ -68,13 +55,16 @@ window#waybar {
 }
 
 #custom-power {
+    font-size:18px;
+  margin: 0.2rem 0.3rem;
   color: @nord11;
+    padding: 0 10px;
 }
 
 #custom-notification{
     color: @nord7;
     font-size: 22px;
-    padding: 0 15 0 0;
+    padding: 0px 15px 0px 0px;
 }
 
 
@@ -89,17 +79,23 @@ tooltip {
   margin: 0.4rem 0.25rem;
 }
 #bluetooth{
-  font-size : 22px;
-  padding: 0.3rem 0.2rem;
-  margin: 0.4rem 0.25rem;
+  font-size:22px;
+  padding: 0.3rem 0rem;
+  margin: 0.3rem 0.5rem;
+}
+
+
+#battery{
+  padding: 0.3rem 0rem;
+  margin: 0.3rem 0.2rem;
 }
 
 
 #clock {
-    padding: 0.7rem 0.5rem 0rem 0.7rem;
-    margin: 0.4rem 0.25rem;
+    padding: 0.3rem 0rem 0rem 0rem;
+    margin: 0.3rem 0.5rem;
     font-family: "monospace";
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 900;
     transition: transform 0.5s ease-in-out;
 }
@@ -113,33 +109,6 @@ tooltip {
   margin: 0.4rem 0.25rem;
   font-size: 20px;
 }
-
-#mpris {
-    font-size: 14px; 
-    color: #b4befe;
-    padding: 0 12px;
-    margin: 8 4px;
-    border-radius: 8px;
-    background: rgba(180, 190, 254, 0.1);
-    transition: all 0.3s ease;
-    min-width: 100px;
-}
-
-#mpris.playing {
-    color: @nord14;
-    background: rgba(166, 227, 161, 0.1);
-}
-
-#mpris.paused {
-    color: @nord13;
-    background: rgba(249, 226, 175, 0.1);
-}
-
-#mpris.stopped {
-    color: @nord11;
-    background: rgba(249, 226, 175, 0.1);
-}
-
 #tags {
   border-radius: 8px;
   padding: 4px 8px;
@@ -174,7 +143,7 @@ tooltip {
   margin: 0.4rem 0.25rem;
   border-radius: 6px;
   font-family: "JetBrainsMono Nerd Font", monospace;
-  font-size: 22px;
+  font-size: 24px;
   color: @nord8;
 }
 

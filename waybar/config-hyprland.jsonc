@@ -1,14 +1,12 @@
 {
   "layer": "bottom",
   "position": "top",
-  "height": 60,
-  "spacing": 2,
   "exclusive": true,
   "gtk-layer-shell": true,
   "passthrough": false,
   "fixed-center": true,
-  "modules-left": ["custom/distrologo", "dwl/tags"  ],
-  "modules-center": ["mpris" ],
+  "modules-left": ["custom/distrologo", "hyprland/workspaces"  ],
+  "modules-center": [ ],
   "modules-right": [
     "pulseaudio",
     "network",
@@ -36,20 +34,7 @@
       "sort-by-number": true
     }
   },
-
-  "dwl/tags": {
-  "format": "{tag}",
-  "tag-labels": [
-    "[  ]",  
-    "[  ]",  
-    "[  ]",  
-    "[  ]",  
-    "[  ]",  
-    "[  ]"   
-  ],
-  "num-tags": 6
-},
-
+ 
   "custom/distrologo": {
     "format":"󰣇",
     "tooltip":true,
@@ -198,6 +183,4 @@
  },
 
 
-}}
-
-
+}
