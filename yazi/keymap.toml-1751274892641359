@@ -1,0 +1,16 @@
+[[manager.prepend_keymap]]
+on = ["f", "f"]
+run = "plugin --sync fzf"
+desc = "Fuzzy search files (fd)"
+
+
+[[manager.prepend_keymap]]
+on = ["f", "d"]
+run = "plugin --sync fzf --args '-t d'"
+desc = "Fuzzy search directories"
+
+[[manager.prepend_keymap]]
+on = ["f", "r"]
+run = "plugin fr rg"
+desc = "Search file by content (rg)"
+
