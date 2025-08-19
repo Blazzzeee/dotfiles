@@ -301,7 +301,7 @@ static Window root, wmcheckwin;
 /* configuration, allows nested code to access above variables */
 #include "config.h"
 
-static int gappx = 10; /* default gap size in pixels */
+static int gappx = 5; /* default gap size in pixels */
 /* compile-time check if all tags fit into an unsigned int bit array. */
 struct NumTags {
   char limitexceeded[LENGTH(tags) > 31 ? -1 : 1];
@@ -1067,10 +1067,8 @@ void manage(Window w, XWindowAttributes *wa) {
     applyrules(c);
   }
 
-  if (c->x + WIDTH(c) > c->mon->wx + c->mon->ww)
-    c->x = c->mon->wx + c->mon->ww - WIDTH(c);
-  if (c->y + HEIGHT(c) > c->mon->wy + c->mon->wh)
-    c->y = c->mon->wy + c->mon->wh - HEIGHT(c);
+    c->x = c->mon->mx + (c->mon->mw - WIDTH(c)) / 2;
+    c->y = c->mon->my + (c->mon->mh - HEIGHT(c)) / 2;
   c->x = MAX(c->x, c->mon->wx);
   c->y = MAX(c->y, c->mon->wy);
   c->bw = borderpx;

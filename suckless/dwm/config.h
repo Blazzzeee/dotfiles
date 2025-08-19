@@ -70,12 +70,14 @@ static const char *brightnessdown[] = {"/home/eliot/.config/scripts/brightness.s
 static const char *volumeup[] = {"/home/eliot/.config/scripts/volume.sh", "inc", "10", NULL};
 static const char *volumedown[] = {"/home/eliot/.config/scripts/volume.sh", "dec", "10", NULL};
 static const char *powermenu[] = {"/home/eliot/.config/rofi/powermenu/powermenu.sh", NULL};
+static const char *browser[] = {"brave", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_o,      spawn,          {.v = dmenucmd } },
 	{ MODKEY          ,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_x,      spawn,          {.v = powermenu} },
+	{ MODKEY,                       XK_s,      spawn,          {.v = browser} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },

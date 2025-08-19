@@ -175,6 +175,7 @@ static void setgaps(const Arg *arg);
 static void arrange(Monitor *m);
 static void arrangemon(Monitor *m);
 static void attach(Client *c);
+static void attachBelow(Client *c);
 static void attachstack(Client *c);
 static void buttonpress(XEvent *e);
 static void checkotherwm(void);
@@ -264,6 +265,7 @@ static int xerrorstart(Display *dpy, XErrorEvent *ee);
 static void zoom(const Arg *arg);
 
 /* variables */
+static int attachbelow = 1;
 static const char broken[] = "broken";
 static char stext[256];
 static int screen;
@@ -299,7 +301,7 @@ static Window root, wmcheckwin;
 /* configuration, allows nested code to access above variables */
 #include "config.h"
 
-static int gappx = 10; /* default gap size in pixels */
+static int gappx = 5; /* default gap size in pixels */
 /* compile-time check if all tags fit into an unsigned int bit array. */
 struct NumTags {
   char limitexceeded[LENGTH(tags) > 31 ? -1 : 1];
@@ -427,11 +429,21 @@ void arrangemon(Monitor *m) {
     m->lt[m->sellt]->arrange(m);
 }
 
+void attachBelow(Client *c) {
+  if (!selmon->sel || selmon->sel->isfloating || c->isfloating) {
+    attach(c);
+    return;
+  }
+
+  Client *below = selmon->sel;
+  c->next = below->next;
+  below->next = c;
+}
+
 void attach(Client *c) {
   c->next = c->mon->clients;
   c->mon->clients = c;
 }
-
 void attachstack(Client *c) {
   c->snext = c->mon->stack;
   c->mon->stack = c;
@@ -1078,7 +1090,10 @@ void manage(Window w, XWindowAttributes *wa) {
     c->isfloating = c->oldstate = trans != None || c->isfixed;
   if (c->isfloating)
     XRaiseWindow(dpy, c->win);
-  attach(c);
+  if (attachbelow)
+    attachBelow(c);
+  else
+    attach(c);
   attachstack(c);
   XChangeProperty(dpy, root, netatom[NetClientList], XA_WINDOW, 32,
                   PropModeAppend, (unsigned char *)&(c->win), 1);
@@ -1408,7 +1423,10 @@ void sendmon(Client *c, Monitor *m) {
   detachstack(c);
   c->mon = m;
   c->tags = m->tagset[m->seltags]; /* assign tags of target monitor */
-  attach(c);
+  if (attachbelow)
+    attachBelow(c);
+  else
+    attach(c);
   attachstack(c);
   focus(NULL);
   arrange(NULL);
