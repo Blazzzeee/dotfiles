@@ -1,0 +1,38 @@
+--- dwm.c
++++ dwm.c
+@@ -1078,7 +1094,10 @@ manage(Window w, XWindowAttributes *wa)
+ 		c->isfloating = c->oldstate = trans != None || c->isfixed;
+ 	if (c->isfloating)
+ 		XRaiseWindow(dpy, c->win);
+-	attach(c);
++	if( attachbelow )
++		attachBelow(c);
++	else
++		attach(c);
+ 	attachstack(c);
+ 	XChangeProperty(dpy, root, netatom[NetClientList], XA_WINDOW, 32, PropModeAppend,
+ 		(unsigned char *) &(c->win), 1);
+@@ -1433,7 +1452,10 @@ sendmon(Client *c, Monitor *m)
+ 	detachstack(c);
+ 	c->mon = m;
+ 	c->tags = m->tagset[m->seltags]; /* assign tags of target monitor */
+-	attach(c);
++	if( attachbelow )
++		attachBelow(c);
++	else
++		attach(c);
+ 	attachstack(c);
+ 	focus(NULL);
+ 	arrange(NULL);
+@@ -1913,7 +1935,10 @@ updategeom(void)
+ 					m->clients = c->next;
+ 					detachstack(c);
+ 					c->mon = mons;
+-					attach(c);
++					if( attachbelow )
++						attachBelow(c);
++					else
++						attach(c);
+ 					attachstack(c);
+ 				}
+ 				if (m == selmon)
